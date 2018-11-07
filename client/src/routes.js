@@ -1,9 +1,13 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './home/Home';
+import DisplayCards from './plant_gallery/DisplayCards';
 
-function routes() {
-  return(
+const Routes = () => (
+  <Switch>
+    <Route exact path='/' component={Home} />
+    <Route path='/gallery' component={DisplayCards} />
+  </Switch>
+)
 
-  )
-}
-
-export default routes;
+export default Routes;

@@ -2,24 +2,25 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const plantSchema = new Schema( {
-  image: String,
+  image: {
+    filename: String,
+  },
   name: String,
   water: {
     type: String,
-    enum: ["twice a week", "once a week"]
+    enum: ["sparingly", "as needed", "often"]
   },
-  reminder: Boolean,
+  // reminder: Boolean,
   light: {
     type: String,
-    enum: ["full", "moderate", "low"] 
+    enum: ["low", "medium", "bright, indirect", "bright, direct"] 
   },
   fertilize: {
     type: String,
-    enum: ["weekly", "monthly", "seasonaly"],
-    lastFertilized: Date
+    enum: ["monthly", "quarterly", "annually"],
   },
   datePlanted: Date,
-  specialInstructions: String
+  notes: String
 });
 
 module.exports = mongoose.model("Plant", plantSchema)

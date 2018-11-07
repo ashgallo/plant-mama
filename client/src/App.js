@@ -1,12 +1,10 @@
 import React from 'react';
-import Home from './home/Home';
+import Routes from './Routes';
 
-function App() {
-  return (
-    <div>
-      <Home />
-    </div>
-  )
-}
+const App = () => (
+  <div>
+    <Routes />
+  </div>
+)
 
 export default App;
