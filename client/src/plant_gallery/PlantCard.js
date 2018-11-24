@@ -28,8 +28,9 @@ const styles = {
   },
   background: {
     width: '15vw',
+    margin: '10px',
     borderRadius: '10px',
-    padding: '10px',
+    padding: '5px',
     backgroundColor: '#d8e2e8',
     color: '#132a48'
   }
